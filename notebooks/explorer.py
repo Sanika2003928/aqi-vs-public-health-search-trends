@@ -1,8 +1,7 @@
 import pandas as pd
 
 # Load the data
-aqi = pd.read_csv("../data/raw/city_day.csv")
-
+aqi = pd.read_csv("data/raw/city_day.csv")
 # Look at the basics
 print(aqi.head())
 print(aqi.shape)
@@ -14,5 +13,5 @@ aqi_clean = aqi_clean.dropna(subset=["AQI"])
 
 print(aqi_clean.shape)
 print(aqi_clean.head())
-aqi_clean.to_csv("../data/processed/aqi_clean.csv", index=False)
+aqi_clean.to_csv("data/processed/aqi_clean.csv", index=False)
 print("Saved!")
